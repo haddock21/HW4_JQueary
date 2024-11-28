@@ -1,0 +1,73 @@
+<!--
+	File: index.html
+	GUI Assignment: HW4 Using the jQuery Plugin/UI with Your Dynamic Table   
+	Nikolas Haddock, UMass Lowell Computer Science, 
+	nikolas_haddock@student.uml.edu 
+	Copyright (c) 2024 by Nikolas Haddock.  All rights reserved.
+	This HTML file displays a form that takes input into a form
+    and then calls an external JavaScript file on submit
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table Generator</title>
+    <link href="./css/jqueryUI.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <h1>Multiplication Table Generator</h1>
+    <div class="container">
+        <form id="multiplication-form">
+            <div class="formHead"><i>Please Enter the Table Ranges</i></div>
+            <div class="hRange"> <!-- Contains horizontal ranges -->
+                <div class="inputGroup"> <!-- Contains the label, input -->
+                    <label for="hStart">Row Start:</label>
+                    <input id="hStart" name="hStart" type="number">
+                </div>
+                <div class="inputGroup">
+                    <label for="hEnd">Row End:</label>
+                    <input id="hEnd" name="hEnd" type="number">
+                </div>
+            </div>
+            <div id="slider1" class="slider"></div>
+            <div class="vRange"> <!-- Contains verticle ranges -->
+                <div class="inputGroup">
+                    <label for="vStart">Column Start:</label>
+                    <input id="vStart" name="vStart" type="number">
+                </div>
+                <div class="inputGroup">
+                    <label for="vEnd">Column End:</label>
+                    <input id="vEnd" name="vEnd" type="number">
+                </div>
+            </div>
+            <div id="slider2" class="slider"></div>
+            <div id="buttons">
+                <button type="button" id="clear_form">Clear Form</button>
+                <button type="button" id="add_tab">Generate Table</button>
+                <button type="button" id="create-manage-tabs">Delete Tables</button>
+            </div>
+        </form>
+        <div id="tabs">
+            <ul>
+              <li><a href="#edit-tab">Current Table</a></li>
+            </ul>
+            <div id="edit-tab">
+              <div id="edit-table" class="table-container">
+                <!-- Table Placeholer -->
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <!-- Link to the external JavaScript file -->
+    <script type="text/JavaScript" src="./js/script.js"></script>
+</body>
+
+</html>

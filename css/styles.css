@@ -1,0 +1,199 @@
+/*
+	File: styles.css 
+	GUI Assignment: HW4 Using the jQuery Plugin/UI with Your Dynamic Table   
+	Nikolas Haddock, UMass Lowell Computer Science, 
+	nikolas_haddock@student.uml.edu 
+	Copyright (c) 2024 by Nikolas Haddock.  All rights reserved.
+	This is an external css file that styles an HTML file that 
+    builds a multiplication table dynamically with input from
+    a form
+*/
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #bababa;
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+ /* full content container */
+.container {
+    display: flex;
+    flex-direction: row; /* Has form and table on top of eachother */
+    align-items: center;
+    max-width: 90%;
+    margin: auto;
+}
+
+.slider {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.slider a{
+    text-decoration: none;
+    font-size: small;
+    padding: 4px;
+    text-align: center;
+}
+
+#multiplication-form {
+    display: flex;
+    flex-direction: column; /* Has children of form on top of eachother */
+    align-items: center;
+    margin: auto 30px;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    border: solid 3px #53535368;
+    max-width: 50%;
+}
+/* Sets form header to be in the border of the form */
+.formHead {
+    position: absolute;
+    top: -10px;
+    margin: 0 auto;
+    background:  #bababa;
+    padding: 0 10px;
+    width: 225px;
+    text-align: center;
+}
+/* Groups form label, input and error message */
+.inputGroup {
+    width: 50%;
+}
+/* Styling for row form and column form */
+.hRange, .vRange{
+    display: flex;
+    flex-direction: row; /* Puts the row forms and column forms next to eachother */
+    padding: 20px;
+    width: 95%;
+}
+
+#multiplication-form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#multiplication-form input {
+    width: 90%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+}
+
+button {
+    margin: 0 auto;
+    padding: 8px 16px;
+    border: none;
+    background-color: #275726;
+    color: white;
+    font-weight: bold;
+    cursor: pointer; /* Changes cursor when over button */
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #004999;
+}
+
+.error-message {
+    color: red;
+    display: none; /* Sets error message to not show at start */
+    width: 90%;
+}
+
+.table-container {
+    margin-top: 15px;
+    max-height: 450px;
+    max-width: 100%;
+    overflow: auto; /* makes table scrollable */
+    margin: 0 auto;
+    padding: 0;
+    scrollbar-width: thin;
+
+}
+
+#tabs {
+    margin-top: 15px;
+    height: 600px;
+    width: 50%;
+}
+
+#tabs ul {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scrollbar-width: thin;
+}
+#tabs ul li {
+    flex: 0 0 auto; /* Prevent tabs from stretching */
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 2px;
+}
+
+th {
+    position: sticky; /* makes header row stay on screen when scrolling */
+    top: 0;
+    background-color: #70a4b4;
+    color: #535353;
+    z-index: 1; /* sets header to be behing upper left cell */
+}
+
+tr:nth-child(even) td {
+    background-color: #955c5cb7;
+}
+tr:nth-child(odd) td {
+    background-color: #8a8a8ab7;
+}
+
+tr th:first-child, td:first-child {
+    position: sticky; /* makes first column stay when scrolling */
+    left: 0;
+    z-index: 1; 
+}
+
+tr:first-child th:first-child {
+    position: sticky; /* keeps upper left cell on screen */
+    z-index: 2; /* keeps upper left cell on top */
+    background-color: #eeeeee;
+}
+
+/* Ensure the list container displays block-level elements */
+#tabs-list-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 475px
+}
+
+/* Reset the styles for the unordered list */
+#tabs-list-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: block; /* Ensure the list is displayed as a block */
+    max-height: 470px;
+    overflow:auto;
+}
+
+/* Set list items to display as block elements */
+#tabs-list-container li {
+    display: block !important;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+/* Optional: Style the checkboxes */
+#tabs-list-container .tab-checkbox {
+    margin-right: 10px;
+}
