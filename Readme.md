@@ -1,5 +1,5 @@
 GitHub repository:
-https://github.com/haddock21/HW3_Mult_Table.git
+https://github.com/haddock21/HW4_JQueary.git
 
 GitHub pages URL:
-https://haddock21.github.io/HW3_Mult_Table/
+https://haddock21.github.io/HW4_JQueary/
