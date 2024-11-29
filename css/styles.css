@@ -169,7 +169,6 @@ tr:first-child th:first-child {
     background-color: #eeeeee;
 }
 
-/* Ensure the list container displays block-level elements */
 #tabs-list-container {
     display: flex;
     flex-direction: column;
@@ -181,7 +180,7 @@ tr:first-child th:first-child {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: block; /* Ensure the list is displayed as a block */
+    display: block;
     max-height: 470px;
     overflow:auto;
 }
@@ -193,7 +192,7 @@ tr:first-child th:first-child {
     padding: 10px;
 }
 
-/* Optional: Style the checkboxes */
+/* Style the checkboxes */
 #tabs-list-container .tab-checkbox {
     margin-right: 10px;
 }
